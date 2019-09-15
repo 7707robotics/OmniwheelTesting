@@ -8,20 +8,24 @@
 package frc.robot;
 
 /**
- * Add your docs here.
+ * Contains static definitions of key constants involved in the robot control system. 
+ * These are primarily IDs associated with hardware connected to the DriverStation or RoboRIO.
  */
 public class RobotMap {
     //Speed Controllers
-    public static final int frontLeftMotor = 1;    //PWM
-    public static final int backLeftMotor = 2;     //PWM
-    public static final int frontRightMotor = 3;   //PWM
-    public static final int backRightMotor = 4;    //PWM
+    public static final int FRONT_LEFT_MOTOR = 1;    //PWM
+    public static final int BACK_LEFT_MOTOR = 2;     //PWM
+    public static final int FRONT_RIGHT_MOTOR = 3;   //PWM
+    public static final int BACK_RIGHT_MOTOR = 4;    //PWM
 
     //Driver Input
-    public static final int joystick = 0; 
+    public static final int JOYSTICK = 0; 
 
     //Drive Style
+    
     public static enum DriveStyle {
-        DIFFERENTIAL, MECANUM_CARTESIAN, MECANUM_POLAR
+        DIFFERENTIAL, 
+        MECANUM_CARTESIAN,      //Takes in x, y, z inputs
+        MECANUM_POLAR           //Takes in magnitude (r), angle (theta), and z input; theta is measured in degrees
     }
 }

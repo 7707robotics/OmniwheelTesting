@@ -13,7 +13,7 @@ import edu.wpi.first.wpilibj.drive.MecanumDrive;
 import frc.robot.commands.DriveCommand;
 
 /**
- * Add your docs here.
+ * Drives the robot.
  */
 public class DriveSubsystem extends Subsystem {
   // Put methods for controlling this subsystem

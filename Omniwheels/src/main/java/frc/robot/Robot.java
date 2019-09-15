@@ -44,13 +44,19 @@ public class Robot extends TimedRobot {
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
 
-    frontLeftMotor = new PWMVictorSPX(RobotMap.frontLeftMotor);
-    backLeftMotor = new PWMVictorSPX(RobotMap.backLeftMotor);
-    frontRightMotor = new PWMVictorSPX(RobotMap.frontRightMotor);
-    backRightMotor = new PWMVictorSPX(RobotMap.backRightMotor);
+    //Initializing the joystick object
+    driverInput = new Joystick(RobotMap.JOYSTICK);
 
+    //Initializing SpeedController objects for the drive train motors
+    frontLeftMotor = new PWMVictorSPX(RobotMap.FRONT_LEFT_MOTOR);
+    backLeftMotor = new PWMVictorSPX(RobotMap.BACK_LEFT_MOTOR);
+    frontRightMotor = new PWMVictorSPX(RobotMap.FRONT_RIGHT_MOTOR);
+    backRightMotor = new PWMVictorSPX(RobotMap.BACK_RIGHT_MOTOR);
+
+    //Initializing a mecanum drive train object
     driveTrain = new MecanumDrive(frontLeftMotor, backLeftMotor, frontRightMotor, backRightMotor);
 
+    //Initializing the drive subsystem
     driveSubsystem = new DriveSubsystem(driverInput, driveTrain);
   }
 
