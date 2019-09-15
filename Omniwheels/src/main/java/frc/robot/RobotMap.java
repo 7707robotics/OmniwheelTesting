@@ -22,6 +22,6 @@ public class RobotMap {
 
     //Drive Style
     public static enum DriveStyle {
-        DIFFERENTIAL, MECANUM
+        DIFFERENTIAL, MECANUM_CARTESIAN, MECANUM_POLAR
     }
 }
